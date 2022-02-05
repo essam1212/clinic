@@ -1,0 +1,43 @@
+<div class=" container ">
+        <div class="title  text-center ">
+            <h2 class=" my-5 position-relative">للحجز والاستعلام</h2>
+        </div>
+        <div class="my-3">
+            <label for="" class=" fs-2 fw-bold p-2">التخصصات</label>
+
+            <div class=" text-center ">
+                <select class="form-select" aria-label="Default select example" (change)="onSlecet($event)">
+
+                    <option value="1">اختر التخصص</option>
+                    <option  value="{{specialts.id}}" *ngFor="let specialts of specialty"> {{specialts.name}}</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="" class=" fs-2 fw-bold pb-2">الدكتور</label>
+
+            <div class=" text-center ">
+                <select class="form-select" aria-label="Default select example" (change)="onSlecet2($event)">
+                    <option value="1" >اختر الدكتور</option>
+                    <option value="{{doctors.id2}}" *ngFor="let doctors of doctor"> {{doctors.name}}</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="my-3">
+            <label for="" class=" fs-2 fw-bold pb-2">الوقت المتاح للحجز</label>
+
+            <div class=" text-center ">
+                <select class="form-select" aria-label="Default select example">
+                    <option value="1">اختر المعاد المناسب للكشف</option>
+                    <option *ngFor="let times of time">{{times.name}}</option>
+
+                </select>
+            </div>
+        </div>
+        <div class=" text-center mt-5 ">
+            <button type="button" class="btn btn-success "   >احجز الان</button>
+           
+           
+</div>
